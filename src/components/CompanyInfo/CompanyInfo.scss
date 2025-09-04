@@ -47,7 +47,7 @@
 
     p {
       font-size: 14px;
-      color: rgba(255, 255, 255, 0.7);
+      color: white;
       margin: 0;
 
       @media (max-width: $breakpoint-mobile) {
@@ -97,7 +97,7 @@
       }
 
       &--positive {
-        color: #10B981;
+        color: #167F47;
       }
     }
   }

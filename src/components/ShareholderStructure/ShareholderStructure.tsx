@@ -42,7 +42,7 @@ const ShareholderStructure: React.FC = () => {
 
   const tableColumns = [
     {
-      title: "Акционер",
+      title: "Держатель акции",
       dataIndex: "holder",
 
       key: "holder",
@@ -50,7 +50,7 @@ const ShareholderStructure: React.FC = () => {
     },
 
     {
-      title: "% доля",
+      title: "% Доли",
       dataIndex: "share_percent",
       key: "share_percent",
       className: "percent-column",

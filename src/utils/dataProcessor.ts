@@ -41,7 +41,7 @@ export const getChartColors = (): string[] => {
     '#EF4444',  
 
     "#F59E0B",  
-    '#10B981',  
+    '#167F47',  
     "#8B5CF6",  
 
     '#EC4899',  

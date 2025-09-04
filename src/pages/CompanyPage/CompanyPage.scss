@@ -5,7 +5,7 @@
   background: #F9FAFB;
 
   &__hero {
-    background: linear-gradient(135deg, #2B3544 0%, #1F2937 100%);
+    background: #172339;
     position: relative;
     overflow: hidden;
 
@@ -16,7 +16,7 @@
       right: -10%;
       width: 60%;
       height: 200%;
-      background: radial-gradient(circle, rgba(79, 209, 197, 0.1) 0%, transparent 70%);
+      background: #172339;
       pointer-events: none;
     }
   }

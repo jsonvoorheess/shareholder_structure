@@ -46,7 +46,6 @@
     }
 
     &--active {
-      color: #10B981;
 
       &::after {
         content: '';
@@ -54,8 +53,8 @@
         bottom: -1px;
         left: 0;
         right: 0;
-        height: 2px;
-        background: #10B981;
+        height: 4px;
+        background: #167F47;
       }
     }
   }

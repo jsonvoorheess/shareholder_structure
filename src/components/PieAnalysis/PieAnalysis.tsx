@@ -24,7 +24,7 @@ const PieAnalysis: React.FC<PieAnalysisProps> = ({
       '#3B82F6',  
       '#EF4444',  
       '#F59E0B',  
-      '#10B981',  
+      '#167F47',  
       '#8B5CF6',  
       '#EC4899',  
     ];

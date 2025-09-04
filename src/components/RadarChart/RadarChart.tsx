@@ -33,8 +33,8 @@ const RadarChart = ({ data }: { data: { labels: string[], values: number[] } }) 
       {
         label: 'Оценка стоимости',
         data: data.values,
-        backgroundColor: 'rgba(34, 197, 94, 0.6)',
-        borderColor: '#22C55E',
+        backgroundColor: '#00800099',
+        borderColor: '#008000',
         borderWidth: 2,
         pointBackgroundColor: 'transparent',
         pointBorderColor: 'transparent',
@@ -69,10 +69,10 @@ const RadarChart = ({ data }: { data: { labels: string[], values: number[] } }) 
     scales: {
       r: {
         angleLines: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(227, 225, 225, 1)',
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgb(240, 236, 236)',
         },
         pointLabels: {
           color: 'rgba(255, 255, 255, 0.7)',
@@ -92,12 +92,14 @@ const RadarChart = ({ data }: { data: { labels: string[], values: number[] } }) 
   };
 
   return (
-    <div className="radar-chart">
-      <h3 className="radar-chart__title">Оценка стоимости</h3>
+    // <div className="radar-chart">
+    <>
+    {/* <h3 className="radar-chart__title">Оценка стоимости</h3> */}
       <div className="radar-chart__container">
         <Radar data={chartData} options={options} />
       </div>
-    </div>
+    </>
+    // </div>
   );
 };
 

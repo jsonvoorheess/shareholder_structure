@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .header {
-  background: #2B3544;
+  background: #172339;
   color: white;
   position: sticky;
   top: 0;
@@ -45,7 +45,13 @@
     }
 
     &-text {
-      font-size: 16px;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    &-text-bold {
+      font-size: 20px;
       font-weight: 600;
       letter-spacing: 0.5px;
     }
@@ -107,6 +113,7 @@
   &__user {
     background: transparent;
     border: none;
+    margin-left: 32px;
     color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     padding: 8px;
@@ -117,13 +124,22 @@
     }
   }
 
+  &__account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
   &__login {
-    background: #4FD1C5;
+    background: #37D881;
     border: none;
     color: #1A202C;
     padding: 10px 24px;
     border-radius: 6px;
     font-size: 14px;
+    margin-left: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
