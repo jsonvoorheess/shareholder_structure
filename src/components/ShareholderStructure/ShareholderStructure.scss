@@ -7,7 +7,6 @@
   background-color: transparent;
 
   &__card {
-    // background: white;
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -132,13 +131,13 @@
   }
 
   .ant-table-thead > tr > th {
-    background-color:#172339;
+    position: relative;
+    background-color: #172339;
     color: #fff;
     font-weight: 600;
     font-size: 14px;
     padding: 16px 20px;
-    border-bottom: 1px solid #374151;
-    border-right: 1px solid #374151;
+    border: none; /* Убираем все границы */
 
     &:first-child {
       border-top-left-radius: 11px;
@@ -146,7 +145,16 @@
 
     &:last-child {
       border-top-right-radius: 11px;
-      border-right: none;
+    }
+
+    &:not(:last-child)::after { /* Добавляем вертикальную белую линию */
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 1px;
+      background-color: #fff;
     }
   }
 
