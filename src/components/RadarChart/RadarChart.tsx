@@ -75,7 +75,7 @@ const RadarChart = ({ data }: { data: { labels: string[], values: number[] } }) 
           color: 'rgb(240, 236, 236)',
         },
         pointLabels: {
-          color: 'rgba(255, 255, 255, 0.7)',
+          color: 'rgb(255, 255, 255)',
           font: {
             size: 12,
             weight: '500',
@@ -92,14 +92,9 @@ const RadarChart = ({ data }: { data: { labels: string[], values: number[] } }) 
   };
 
   return (
-    // <div className="radar-chart">
-    <>
-    {/* <h3 className="radar-chart__title">Оценка стоимости</h3> */}
       <div className="radar-chart__container">
         <Radar data={chartData} options={options} />
       </div>
-    </>
-    // </div>
   );
 };
 
