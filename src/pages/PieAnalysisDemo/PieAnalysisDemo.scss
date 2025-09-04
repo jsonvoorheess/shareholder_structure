@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.pie-analysis-demo {
+  padding: 40px;
+  background: #F9FAFB;
+  min-height: 100vh;
+
+  h1 {
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    font-size: 16px;
+    color: #4B5563;
+    margin-bottom: 16px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  &__container {
+    border: 2px dashed #E5E7EB;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    
+    &--mobile {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+}

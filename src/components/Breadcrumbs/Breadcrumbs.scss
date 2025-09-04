@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  font-size: 14px;
+
+  &__link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  &__current {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__separator {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+  }
+}

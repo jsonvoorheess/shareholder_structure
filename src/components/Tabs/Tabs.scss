@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+
+.tabs {
+  &__header {
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 32px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      gap: 24px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__tab {
+    background: transparent;
+    border: none;
+    padding: 16px 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6B7280;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.2s;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 12px 4px;
+      font-size: 13px;
+    }
+
+    &:hover {
+      color: #374151;
+    }
+
+    &--active {
+      color: #10B981;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #10B981;
+      }
+    }
+  }
+
+  &__content {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
