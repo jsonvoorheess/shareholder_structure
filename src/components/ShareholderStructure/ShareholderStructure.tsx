@@ -13,6 +13,7 @@ ChartJS.register(ArcElement, Tooltip, Legend)
 const ShareholderStructure: React.FC = () => {
   const [shareholderData, setShareholderData] = useState<Shareholder[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   useEffect(() => {
     loadData()
@@ -59,6 +60,17 @@ const ShareholderStructure: React.FC = () => {
     },
   ]
 
+  const getBackgroundColors = () => {
+    const colors = getChartColors()
+    if (hoveredIndex === null) return colors
+    
+    return colors.map((color, index) => {
+      if (index === hoveredIndex) return color
+      // Add transparency to non-hovered sections
+      return color + '60' // 60 is hex for ~38% opacity
+    })
+  }
+
   const pieChartData = {
 
     labels: shareholderData.map(item => item.holder),
@@ -66,7 +78,7 @@ const ShareholderStructure: React.FC = () => {
       {
         data: shareholderData.map(item => parseFloat(item.share_percent)),
 
-        backgroundColor: getChartColors(),
+        backgroundColor: getBackgroundColors(),
         borderWidth: 0,
       },
 
@@ -77,6 +89,13 @@ const ShareholderStructure: React.FC = () => {
     responsive: true,
 
     maintainAspectRatio: false,
+    onHover: (_event: any, activeElements: any[]) => {
+      if (activeElements.length > 0) {
+        setHoveredIndex(activeElements[0].index)
+      } else {
+        setHoveredIndex(null)
+      }
+    },
     plugins: {
       legend: {
         display: false,
